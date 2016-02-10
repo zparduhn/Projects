@@ -1,0 +1,73 @@
+.main{
+	width: 100%;
+	height: 100vh;
+	padding: 20px;
+}
+.top3Box{
+	display: flex;	
+	width: 32%;
+	height: 100px;
+}
+.left{
+	float: left;
+	margin-right: 10px;
+}
+.right{
+	float: right;
+	margin-left: 10px;
+}
+.middle{
+	margin: 0 auto;
+}
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+}
+.grey{
+	background-color: grey;
+}
+.fillerText{
+	font-size: 18px;
+}
+.thirds{
+	height: 275px;
+	width: 100%;
+}
+.left3rd{
+	display: inline-block;
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+.right3rd{
+	display: inline-block;	
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+.thirds2{
+	margin-top: 20px;
+	height: 275px;
+	width: 100%;
+	
+}
+.left3rd1{
+	display: inline-block;
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+.right3rd1{
+	display: inline-block;	
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+.middleGrey{
+	width: 80%;
+	margin: 0 auto;
+	height: 275px;
+}
+

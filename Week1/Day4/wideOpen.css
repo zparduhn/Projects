@@ -1,0 +1,244 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Lato', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.orange{
+	color: #E09368	
+}
+.green{
+	color: #BDD435;
+}
+.darkGreen{
+	color: #40666D;
+}
+.brown{
+	color: #8f8787;
+}
+.center-text{
+	text-align: center;
+}
+h4{
+	display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+	font-family: 'Oswald', sans-serif;
+}
+
+.top-home-main{
+    width: 100%;
+    background: url("images/wot-masthead-dark.jpg") bottom no-repeat;
+    background-size: cover;
+}
+.logo{
+	width: 180px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.top-home-main-content{
+	position: relative;
+	padding-top: 60px;
+	padding-bottom: 70px;
+	text-align: center;
+	color: white;
+}
+.nav-wrapper{
+	width: 100%;
+	height: 75px;
+}
+.hamburger{
+	height: 50px;
+	width: 50px;
+	float: right;
+	background: url("images/hamburger.png") center no-repeat;
+	background-size: contain;
+	backgroung-size: 60px;
+}
+.nav{
+	display: none;	
+}
+.green-button{
+	height: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #BDD435;
+	color: white;
+	margin: 0 auto;
+	padding-top: 10px;
+	border-radius: 3px;
+}
+.yourdigital{
+	padding-bottom: 20px;
+	width: 100%;
+}
+.yourdigital > *{
+	display: block;
+}
+
+.sub{
+	font-size: 20px;
+}
+.learn-more-btn{
+	height: 40px;
+	width: 80%;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #BDD435;
+	color: white;
+	margin: 0 auto;
+	padding-top: 10px;
+	border-radius: 3px;
+}
+/**************************  Section 2 *****************************/
+.section2{
+	background: #F0F0F0;
+}
+.section2-text{
+	padding-top: 20px;
+	margin: 0 0 10px;
+	font-weight: 300;
+    font-size: 23px;
+    line-height: 38px;
+	color: #40666D;
+}
+.tools{
+	content: " ";
+    display: block;
+    background: url("images/sprite_home.png");
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    background-position: -22px -113px;
+    margin-bottom: 20px;	
+}
+.compress{
+	width: 90%;
+	margin: 0 auto;
+}
+.howit{
+	font-size: 42px;
+    font-weight: 100;
+	display: block;
+	text-wrap: none;
+	margin-bottom: 0;
+}
+.works{
+    font-size: 42px;
+    margin-top: 0px;
+	display: block;
+	padding-bottom: 60px;
+}
+/******************* Section3 ***********************/
+.section3{
+	
+}
+.card > *{
+	display: block;
+}
+.lightbulb{
+	content: "";
+    display: block;
+    width: 131px;
+    height: 160px;
+    background: url("images/sprite_home.png") no-repeat;
+    margin: 0 auto 27px auto;
+	background-position: -311px -100px;	
+}
+.Bring-business{
+	font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    position: relative;	
+	margin-bottom: 0;
+}
+.learnAbout{
+	margin-top: 20px;
+}
+.arrow{
+	height: 30px;
+    width: 27px;
+    background: url("images/sprite_home.png");
+    content: " ";
+    display: block;
+    background-position: -46px -292px;
+    margin: 20px auto;
+}
+.curvedArrow{
+	content: "";
+    display: block;
+    height: 160px;
+    background: url("images/sprite_home.png") no-repeat;
+    margin: 0 auto 27px auto;
+	background-position: -227px -91px;
+    width: 74px;	
+}
+.powerIcon{
+	content: "";
+    display: block;
+    height: 160px;
+    background: url("images/sprite_home.png") no-repeat;
+    margin: 0 auto 27px auto;
+	background-position: -119px -100px;
+    width: 94px;	
+}
+@media (min-width: 460px){
+	.learn-more-btn{
+		width: 150px;	
+	}
+}
+@media (min-width: 700px) {
+	.hamburger{
+		display: none;
+	}
+	.nav{
+		height: 100px;
+		width: auto;
+		float:right;
+		display:block;
+		padding-top: 100px;	
+		margin-right: 3%;
+	}
+	.nav-link{
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 0 20px 0 0;
+		text-decoration: none;
+		letter-spacing: 1px;	
+		display: inline-block;
+		
+	}
+	
+}
+@media (min-width: 850px){
+	.nav{
+		height: 100px;
+		width: auto;
+		float:right;
+		display:block;
+		padding-top: 20px;	
+		margin-right: 5%;
+	}
+		
+}
+@media (min-width: 960px){
+	.card{
+		display: inline-block;
+		width: 30%;	
+	}
+	.border-left-right{
+		border-left: solid thin grey;
+		border-right: solid thin grey;	
+	}
+}

@@ -1,0 +1,56 @@
+/* CSS Document */
+.main{
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+.header{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	color: white;
+	font-size: 23px;
+	padding-top: 35px;
+}
+.google{
+	float: left;
+	margin-left: 35px;
+}
+.apple{
+	float: left;
+	margin-left: 35px;
+}
+.mainBody{
+	padding: 40px;
+	font-size: 20px;
+}
+.firstCol{
+	float: left;
+	width: 50%;
+	text-align: left;
+	padding-right: 20px;	
+}
+.typeSomething{
+	font-size: 7vw;
+}
+.secondCol{
+	float: left;
+	width: 50%;
+	padding-left: 20px;
+}
+.greyBox{
+	height: 200px;
+	background-color: grey;
+}
+.clear{
+	clear: both;
+}
+.footer{
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	color: white;
+	font-size: 23px;
+	padding-top: 35px;
+	position: absolute;
+}

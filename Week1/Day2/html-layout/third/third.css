@@ -1,0 +1,38 @@
+.header{
+	width: 100%;
+	background-color: #D3D3D3;
+	height: 150px;	
+}
+.blueBox{
+	float: left;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	margin-top: 25px; 
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+}
+.text{
+	height: 175px; 
+	width: 100%;
+}
+.section-1{
+	height: 120px; 
+	width: 100%;
+	background-color: #6985F1;/*blue*/
+}
+.section-2{
+	height: 120px; 
+	width: 100%;
+	background-color: #0CD31D;/*green*/
+}
+.section-3{
+	height: 120px; 
+	width: 100%;
+	background-color: #9DF10D;/*green-yellow*/
+}
+.section-4{
+	height: 120px; 
+	width: 100%;
+	background-color: #E2F708;/*yellow*/
+}
