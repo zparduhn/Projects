@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<title>New Twitter</title>
 	</head>
 	<body>
 		<div id="page-container">
 			<div id="dashboard">
 				<div id="profile-summary">
 					<div class="content">
-						<img class='avatar' src='img/alagoon.jpg' />
-						<p>Your Name Here</p>
+						<img class='avatar' src='img/alagoon.jpg' alt=""/>
+						<p>Zach Parduhn @zachParduhn</p>
 					</div>
 				</div>
 				<div id="tweet-content">
 
 					<!-- STEP 2: When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed. -->
 					<!-- HINT: jQuery ".on" eventHandler -->
-					<textarea class="tweet-compose" placeholder="Compose new Tweet..."/></textarea>
+					<textarea id="tweet-text-area" class="tweet-compose" placeholder="Compose new Tweet..."></textarea>
 
 					<!-- STEP 1: Initially, the Tweet button and the character count button below should be hidden. -->
 					<!-- HINT: Use CSS -->
@@ -39,7 +40,8 @@
 				<h2>Tweets</h2>
 				<div id="stream">
 
-					<!-- STEP 5: When the user successfully inputs characters and clicks the “Tweet” button, a new tweet should be created and added to the tweet stream in the main column, using the user’s fake profile image in the top left and username/fullname. -->
+					<!-- STEP 5: When the user successfully inputs characters and clicks the “Tweet” button,
+					//a new tweet should be created and added to the tweet stream in the main column, using the user’s fake profile image in the top left and username/fullname. -->
 					<!-- HINT: jQuery ".prepend" method -->
 					<div class="tweet">
 						<div class="content">
@@ -55,14 +57,15 @@
 							<!-- HINT: CSS ":hover" pseudo element -->
 							<div class="tweet-actions">
 								<ul>
-									<li><span class="icon action-reply"></span> Reply</li>
-									<li><span class="icon action-retweet"></span> Retweet</li>
-									<li><span class="icon action-favorite"></span> Favorite</li>
-									<li><span class="icon action-more"></span> More</li>
+									<li id="reply"><span class="icon action-reply"></span> Reply</li>
+									<li id="reTweet"><span class="icon action-retweet"></span> Retweet</li>
+									<li id="favorite"><span class="icon action-favorite"></span> Favorite</li>
+									<li id="more"><span class="icon action-more"></span> More</li>
 								</ul>
 							</div>
 
-							<!-- STEP 7: The Retweets/timestamp/Reply areas below should also be hidden by default. These should only expand if you click on the tweet. Use a jQuery animation to accomplish the reveal, similar to how it’s done on Twitter.com -->
+							<!-- STEP 7: The Retweets/timestamp/Reply areas below should also be hidden by default.
+							// These should only expand if you click on the tweet. Use a jQuery animation to accomplish the reveal, similar to how it’s done on Twitter.com -->
 							<!-- HINT: jQuery ".on" eventHandler -->
 							<div class="stats">
 								<div class="retweets">
@@ -91,7 +94,7 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
@@ -131,7 +134,7 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
@@ -171,14 +174,15 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
 				</div><!-- #stream -->
 			</div><!-- #main -->
 		</div><!-- #page-container -->
-	<script src="js/animations.js"></script>
 	<script src="js/jquery-2.0.3.min.js"></script>
+	<script src="js/animations.js"></script>
+
 	</body>
 </html>
