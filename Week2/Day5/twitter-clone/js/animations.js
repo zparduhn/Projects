@@ -241,13 +241,13 @@ $(document).ready(function() {
   $('#tweet-submit').hide();
   $('.tweet-actions').hide();
   $('.stats').hide();
+  $('.reply').hide();
 
   function getStamp() {
-    var hours = new Date().getHours();
     var hours = (hours + 24) % 24;
     var minutes = new Date().getMinutes();
     var mid = 'AM';
-    if (hours == 0) { //At 00 hours we need to show 12 am
+    if (hours === 0) { //At 00 hours we need to show 12 am
       hours = 12;
     } else if (hours > 12) {
       hours = hours % 12;
@@ -259,19 +259,19 @@ $(document).ready(function() {
       min = minutes;
     }
     return hours + ":" + min + mid;
-  };
+  }
   //Show/Remove tweet and char count fnctions
   $('.tweet-compose').on("focus", function() {
     $(this).css({
       height: '5em'
-    })
+    });
     $('#char-count').show();
     $('#tweet-submit').show();
   });
   // $('.tweet-compose').on("blur", function() {
   //   $(this).css({
   //   	height: '2.5em'
-  //   })
+  //   });
   //   $('#char-count').hide();
   //   $('#tweet-submit').hide();
   // });
@@ -298,21 +298,31 @@ $(document).ready(function() {
 
   $('#tweet-submit').on("click", function() {
     var newTweetText = $('.tweet-compose').val();
-    $('.tweet-compose').val('');
-    $('#stream').prepend(newTweet(newTweetText));
-    $('.tweet-actions').hide();
-    $('.stats').hide();
-    $('.tweet').mouseenter(function() {
-      $(this).find('.tweet-actions').slideDown();
-      //$(this).find('.stats').slideDown();
-    });
-    $('.tweet').mouseleave(function() {
-      $(this).find('.tweet-actions').slideUp();
-      $(this).find('.stats').slideUp();
-    });
-    $('.tweet').on('click', function() {
-      $(this).find('.stats').slideDown();
-    });
+    if(newTweetText){
+      $('.tweet-compose').val('');
+      $('#stream').prepend(newTweet(newTweetText));
+      $('.tweet-actions').hide();
+      $('.stats').hide();
+      $('.reply').hide();
+      // below is mouse enter and leave for new tweets. otherwise they wont be hidden.
+      $('.tweet').mouseenter(function() {
+        $(this).find('.tweet-actions').slideDown();
+        //$(this).find('.stats').slideDown();
+      });
+      $('.tweet').mouseleave(function() {
+        $(this).find('.tweet-actions').slideUp();
+        $(this).find('.stats').slideUp();
+        $(this).find('.reply').slideUp();
+      });
+      $('.tweet').on('click', function() {
+        $(this).find('.stats').slideDown();
+        $(this).find('.reply').slideDown();
+      });
+
+    }
+    else{
+      alert("Must have text in")
+    }
   });
 
   function newTweet(text) {
@@ -356,6 +366,8 @@ $(document).ready(function() {
       "</div>";
 
   }
+
+  //////////////////////////////////////////////// Moue enter and leaver functions
   $('.tweet').mouseenter(function() {
     $(this).find('.tweet-actions').slideDown();
     //$(this).find('.stats').slideDown();
@@ -363,14 +375,11 @@ $(document).ready(function() {
   $('.tweet').mouseleave(function() {
     $(this).find('.tweet-actions').slideUp();
     $(this).find('.stats').slideUp();
+    $(this).find('.reply').slideUp();
   });
   $('.tweet').on('click', function() {
     $(this).find('.stats').slideDown();
+    $(this).find('.reply').slideDown();
   });
-
-
-
-
-
 
 });
