@@ -58,7 +58,7 @@
 							<div class="tweet-actions">
 								<ul>
 									<li id="reply"><span class="icon action-reply"></span> Reply</li>
-									<li id="reTweet"><span class="icon action-retweet"></span> Retweet</li>
+									<li id="reTweet" class="retweetClick"><span class="icon action-retweet"></span> Retweet</li>
 									<li id="favorite"><span class="icon action-favorite"></span> Favorite</li>
 									<li id="more"><span class="icon action-more"></span> More</li>
 								</ul>
@@ -108,7 +108,7 @@
 							<div class="tweet-actions">
 								<ul>
 									<li><span class="icon action-reply"></span> Reply</li>
-									<li><span class="icon action-retweet"></span> Retweet</li>
+									<li class="retweetClick"><span class="icon action-retweet"></span> Retweet</li>
 									<li><span class="icon action-favorite"></span> Favorite</li>
 									<li><span class="icon action-more"></span> More</li>
 								</ul>
@@ -148,7 +148,7 @@
 							<div class="tweet-actions">
 								<ul>
 									<li><span class="icon action-reply"></span> Reply</li>
-									<li><span class="icon action-retweet"></span> Retweet</li>
+									<li class="retweetClick"><span class="icon action-retweet"></span> Retweet</li>
 									<li><span class="icon action-favorite"></span> Favorite</li>
 									<li><span class="icon action-more"></span> More</li>
 								</ul>
@@ -179,8 +179,19 @@
 						</div>
 					</div><!-- .tweet -->
 				</div><!-- #stream -->
+
 			</div><!-- #main -->
+
 		</div><!-- #page-container -->
+		<div id="openModal" class="modalDialog">
+			<div>
+				<div id="close" class="close">X</div>
+				<h2>Retweet this to your followers?</h2>
+				<textarea class="newCommentText" placeholder="Add a comment..."></textarea>
+				<div class="retweetedText"></div>
+				<button class="button" id="retweet-submit">Retweet</button>
+			</div>
+		</div>
 	<script src="js/jquery-2.0.3.min.js"></script>
 	<script src="js/animations.js"></script>
 

@@ -242,6 +242,7 @@ $(document).ready(function() {
   $('.tweet-actions').hide();
   $('.stats').hide();
   $('.reply').hide();
+  $('.modalDialog').hide();
 
   function getStamp() {
     var hours = (hours + 24) % 24;
@@ -318,15 +319,25 @@ $(document).ready(function() {
         $(this).find('.stats').slideDown();
         $(this).find('.reply').slideDown();
       });
+      $('.retweetClick').on('click', function() {
+        var retweetText = $($(this).parents()[2]).find('.tweet-text').text();
+        var tweetOwner = $($(this).parents()[2]).find('.username').text();
+        //var tweetImage = $($(this).parents()[2]).find('.avatar').;
+        $('.retweetedText').text(tweetOwner + " " + retweetText);
+        $('.modalDialog').show();
+      });
+      $('#close').on('click', function() {
+        $('.modalDialog').hide();
+      });
 
     }
     else{
-      alert("Must have text in")
+      alert("Must have text in");
     }
   });
 
   function newTweet(text) {
-    var now = jQuery.timeago(new Date());;
+    var now = jQuery.timeago(new Date());
     return "<div class=\"tweet\">" +
       "<div class=\"content\">" +
       "<img class=\"avatar\" src=\"img/alagoon.jpg\" />" +
@@ -336,7 +347,7 @@ $(document).ready(function() {
       "<div class=\"tweet-actions\">" +
       "<ul>" +
       "<li><span class=\"icon action-reply\"></span> Reply</li>" +
-      "<li><span class=\"icon action-retweet\"></span> Retweet</li>" +
+      "<li class=\"retweetClick\"><span class=\"icon action-retweet\"></span> Retweet</li>" +
       "<li><span class=\"icon action-favorite\"></span> Favorite</li>" +
       "<li><span class=\"icon action-more\"></span> More</li>" +
       "</ul>" +
@@ -381,5 +392,17 @@ $(document).ready(function() {
     $(this).find('.stats').slideDown();
     $(this).find('.reply').slideDown();
   });
+  $('.retweetClick').on('click', function() {
+    var retweetText = $($(this).parents()[2]).find('.tweet-text').text();
+    var tweetOwner = $($(this).parents()[2]).find('.username').text();
+    //var tweetImage = $($(this).parents()[2]).find('.avatar').;
+    $('.retweetedText').text(tweetOwner + " " + retweetText);
+    $('.modalDialog').show();
+
+  });
+  $('#close').on('click', function() {
+    $('.modalDialog').hide();
+  });
+
 
 });
