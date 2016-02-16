@@ -29,7 +29,7 @@
           <option value="current_location.country">Country</option>
         </select>
 
-        <select class="input-medium" ng-model="ascDec = !ascDec">
+        <select class="input-medium" ng-model="sortReverse" ng-options="option.value as option.display for option in sortOptions">
           <option value="+">Descending</option>
           <option value="-">Ascending</option>
         </select>
@@ -38,7 +38,7 @@
     </form>
 
     <ul>
-      <li class="friend" ng-repeat="friend in friends | filter: searchTerm | orderBy: SortBy : ascDec">
+      <li class="friend" ng-repeat="friend in friends | filter: searchTerm | orderBy: SortBy : sortReverse">
         <img class="profile-pic" src="{{friend.pic_square}}">
 
         <h3>{{friend.name}}</h3>

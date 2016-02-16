@@ -1,6 +1,17 @@
 var app = angular.module('friend');
 app.controller('friendCtrl', function($scope){
 
+  $scope.sortOptions = [
+    {
+      display: 'Ascending',
+      value: false
+    },
+    {
+      display: 'Descending',
+      value: true
+    }
+  ];
+
 $scope.friends = [
   {
     "name": "Preston McNeil",

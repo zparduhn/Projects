@@ -11,7 +11,7 @@ app.controller('homeCtrl', function($scope) {
     },
     {
       display: 'Descending',
-     value: true
+      value: true
     }
   ];
 });
