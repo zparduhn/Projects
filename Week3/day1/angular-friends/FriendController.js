@@ -12,6 +12,13 @@ app.controller('friendCtrl', function($scope){
     }
   ];
 
+$scope.SortBy = "name";
+$scope.sortReverse = false;
+
+// $scope.sortType = 'name';
+// $scope.sorter = false;
+
+
 $scope.friends = [
   {
     "name": "Preston McNeil",

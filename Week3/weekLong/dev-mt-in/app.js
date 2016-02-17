@@ -1,1 +1,1 @@
-angular.module('devMtIn', []);
+var app = angular.module('devMtIn', []);

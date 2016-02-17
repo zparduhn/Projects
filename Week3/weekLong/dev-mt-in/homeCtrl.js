@@ -1,9 +1,5 @@
-var app = angular.module('devMtIn');
-app.controller('homeCtrl', function($scope) {
-  $scope.myProfile = {
-    name: "",
-    friends: [{name: 'Ryan'}, {name: 'Bryan'}, {name: 'Sarah'}, {name: 'Zac'}, {name: 'Erin'}]
-  };
+app.controller('homeCtrl', function($scope, profileService) {
+  $scope.myProfile = profileService.checkForProfile();
   $scope.sortOptions = [
     {
       display: 'Ascending',
@@ -14,4 +10,26 @@ app.controller('homeCtrl', function($scope) {
       value: true
     }
   ];
+  $scope.editing = false;
+
+  $scope.saveProfile = function(){
+    var profile = creatProfile();
+    profileService.saveProfile(profile);
+    $scope.editing = false;
+
+  };
+
+  function creatProfile(){
+    return{
+      name: $scope.myProfile.name,
+      likes: $scope.myProfile.likes,
+      color: $scope.myProfile.color
+    };
+  }
+
+  $scope.deleteProfile = function(){
+    profileService.deleteProfile();
+    $scope.myProfile = profileService.checkForProfile();
+  };
+
 });
