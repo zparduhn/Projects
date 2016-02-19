@@ -13,6 +13,7 @@ app.controller('mainCtrl', function($scope, parseService){
 
   };
 
+  $scope.reverse = false;
 
 
   //The postData function will take whatever the user typed in (hint: look at the html and see what ng-model correlates to on the input box),

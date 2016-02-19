@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="devMtIn">
+<html ng-app="devMtIn" lang="en">
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700,600" rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/styles3.css">
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,43 +10,44 @@
 </head>
 
 <body ng-controller="homeCtrl">
+
 	<div class="l-header">
-		<h1>{{myProfile.name || 'Your Name'}}</h1>
+		<h1>{{ myProfile.name || 'Your Name' }}</h1>
 	</div>
-  <br>
+
   <div class="wrapper">
     <div>
       <h2>Profile</h2>
-      <button class="l-btn l-btn-main" ng-click="editing = !editing">Editing: {{editing}}</button>
+      <button ng-click="editing = !editing" class="l-btn l-btn-main">Editing : {{ editing }}</button>
     </div>
 
     <div>
 
-      <input id="name" type="text" placeholder="Your Name" ng-model="myProfile.name" ng-disabled="!editing">
+      <input ng-disabled="!editing" id="name" type="text" placeholder="Your Name" ng-model="myProfile.name">
       <br />
 
-      <input id="likes" type="text" placeholder="Likes" ng-model="myProfile.likes" ng-disabled="!editing">
+      <input ng-disabled="!editing" id="likes" type="text" placeholder="Likes" ng-model="myProfile.likes">
       <br />
 
-      <input id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.color" ng-disabled="!editing">
+      <input ng-disabled="!editing" id="favColor" type="text" placeholder="Favorite Color" ng-model="myProfile.favColor">
       <br />
-      <button class="l-btn l-btn-success" ng-click="saveProfile()">Save</button>
-      <button class="l-btn l-btn-danger" ng-click="deleteProfile()">Delete</button>
+      <button ng-click="saveProfile(myProfile)" ng-disabled="!editing" class="l-btn l-btn-success">Save</button>
+      <button ng-click="deleteProfile()" class="l-btn l-btn-danger">Delete</button>
     </div>
   </div>
 
   <div class="l-container">
-      <h2>Friends</h2>
+    <h2>Friends</h2>
 
-    <button class="l-btn l-btn-main">Go</button>
-    <input type="text" placeholder="Find Friends" ng-model="find.Friend.name">
+    <button ng-click="findFriends(findFriend.name)" class="l-btn l-btn-main">Go</button>
+    <input type="text" placeholder="Find Friends" ng-model="findFriend.name">
     <select ng-model="sortReverse" ng-options="option.value as option.display for option in sortOptions"></select>
-    <div class="friendList" ng-repeat="friend in myProfile.friends | filter : find.Friend.name | orderBy : 'name' : sortReverse">
-      <span class="closeBtn"></span>
-        {{friend.name}}
+    <div class="friendList" ng-repeat="friend in myProfile.friends | filter : findFriend.name | orderBy : name : sortReverse">
+      <span class="closeBtn" ng-click="removeFriend(friend._id)"></span>
+        {{ friend.name }}
       <br />
-      <div class="secondConnection friendList">
-          My Second Connections
+      <div ng-repeat="secondFriend in friend.friends track by $index" class="secondConnection friendList">
+        Friends: {{ secondFriend.name }}
       </div>
     </div>
   </div>
@@ -60,15 +61,17 @@
 				</div>
 					<br />
 				<div class="friendList">
-					<span class="friend"></span> Potential Friends
+					<span class="" ng-repeat="friend in potentialFriends"><button ng-click="addFriend(friend._id)">Add: </button>{{ friend.name }}<br /></span> Potential Friends
 				</div>
 			</div>
 		</div>
 	</div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
-<script src="app.js"></script>
-<script src="homeCtrl.js"></script>
-<script src="profileService.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="homeCtrl.js"></script>
+  <script src="profileService.js"></script>
+	<script src="friendService.js"></script>
 </body>
 
 </html>
