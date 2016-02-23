@@ -1,0 +1,16 @@
+
+<div>
+  <div class="top">
+    <h1 class="white">Choose a quiz!</h1>
+    <!-- <div class="yellow">ANGULAR</div>
+    <div class="blue">HTML</div> -->
+    <div ng-repeat="item in quizzes" class="blue">
+         <a ui-sref="quiz.view({quizName: item.name})">{{item.name}}</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <h1>View Past Quizzes</h1>
+    <div>ANGULAR</div>
+    <div>HTML</div>
+  </div>
+</div>
