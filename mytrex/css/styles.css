@@ -29,4 +29,27 @@ body{
 .link{
 	display: inline-block;
 	color: #B3B3B8;
+	font-size: 22px;
+	margin-left: 20px;
+}
+.link a:onHover{
+	color: blue;
+}
+.navbar-brand{
+	height: 125px;
+}
+#logo{
+	width: 200px;
+}
+#hamburger{
+	float: right;
+	margin-top: 45px;
+	margin-right: 20px;
+}
+.hamburgerMenu{
+	text-decoration: none;
+	float: right;
+}
+.hamburgerMenu>a{
+	margin-left: 10px;
 }
