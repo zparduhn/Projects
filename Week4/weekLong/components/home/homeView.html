@@ -5,7 +5,7 @@
     <!-- <div class="yellow">ANGULAR</div>
     <div class="blue">HTML</div> -->
     <div ng-repeat="item in quizzes" class="blue">
-         <a ui-sref="quiz.view({quizName: item.name})">{{item.name}}</a>
+         <a ui-sref="quiz.view({quizName: item.name})">{{item.name | uppercase}}</a>
     </div>
   </div>
   <div class="bottom">

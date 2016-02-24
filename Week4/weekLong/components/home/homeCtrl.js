@@ -1,6 +1,6 @@
 angular.module('quizApp').controller('homeCtrl', function($scope){
 
-    $scope.quizzes = [{name: 'Angular'}, {name: 'HTML/CSS'}];
+    $scope.quizzes = [{name: 'angular'}, {name: 'html'}];
     $scope.pastQuizzes = [];
 
 });

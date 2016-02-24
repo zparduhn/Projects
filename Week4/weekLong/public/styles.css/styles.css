@@ -62,3 +62,10 @@ body{
 	padding-bottom: 40px;
 	font-weight: bold;
 }
+.button{
+	background-color: #FBD343;
+	padding-top: 5px;
+	padding-bottom:  5px;
+	font-weight: bold;
+	
+}

@@ -13,8 +13,13 @@ angular.module('quizApp', ['ui.router'])
         .state('quiz', {
             url: '/quiz/:quizName',
             templateUrl: 'components/quiz/views/quizContainerView.html',
-            //template: '<div>TEst</div>',
-            controller: 'quizCtrl'
+            //template: '{{quizName}}',
+            controller: 'quizCtrl',
+            resolve: {
+              questions: function($stateParams, quizService){
+                return quizService.getQuestions($stateParams.name);
+              }
+            }
         }).state('quiz.view', {
         parent: 'quiz',
         views: {
