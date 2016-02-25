@@ -1,0 +1,16 @@
+<main>
+  <aside class="leftAside">
+    <div ng-repeat="document in documents">
+      <ul class="documents">{{document.name}}
+        <a href="{{document.brochure}}"><li>Brochure</li></a>
+        <a href="{{document.manual}}"><li>Manual</li></a>
+        <a href="{{document.quick}}"><li>Quick Start</li></a>
+        <li>{{document.french}}</li>
+      </ul>
+    </div>
+  </aside>
+  <div class="previewPane">
+
+  </div>
+
+</main>

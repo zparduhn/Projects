@@ -15,6 +15,13 @@ body{
 .blue{
 	color: #337AB7;
 }
+.leftAside{
+	width: 200px;
+}
+.documents li{
+	list-style-type: none;
+	margin-left: 10px;
+}
 .header{
 	width: 100%;
 	background-color: #FFFFFF;
@@ -82,6 +89,17 @@ body{
 	font-size: 30px;
 	text-align: center;
 	margin: 0 auto;
+	padding-bottom: 20px;
+}
+.synergy{
+	font-size: 40px;
+	font-weight: 700;
+}
+.madeInUsa{
+	padding-bottom: 20px;
+}
+.productsBtn{
+	font-size: 25px;
 }
 .secondaryImage{
 	display: none;
@@ -133,6 +151,7 @@ footer>div{
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
 @media (min-width: 545px){
 	#hamburger{
 		display: none;
@@ -194,7 +213,7 @@ footer>div{
 }
 
 
-@media (min-width: 1017px){
+@media (min-width: 1185px){
 	.secondaryImage{
 		display: inline-block;
 		width: 410px;

@@ -10,4 +10,10 @@ angular.module('mytrex')
     restrict: 'E',
     templateUrl: 'views/footer.html'
   };
+})
+.directive('navDocuments', function() {
+  return{
+    restrict: 'E',
+    templateUrl: 'views/documentsDir.html'
+  };
 });

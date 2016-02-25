@@ -1,5 +1,5 @@
 angular.module('mytrex').controller('documentsCtrl', function($scope, service){
 
-  $scope.test = "it Works";
+  console.log($scope.documents = service.getDocuments());
 
 });
