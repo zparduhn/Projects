@@ -1,24 +1,34 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" id="logo" src="images\mytrex_final_logo (2).png">
-      </a>
-      <div class="">
+      <div>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" class="logo" src="images\mytrex_final_logo (2).png">
+        </a>
+      </div>
 
-        <button id="hamburger" class="btn btn-default" ng-click="showNav=!showNav">
+      <div class="">
+        <button id="hamburger" class="btn btn-default animated fadeIn" ng-click="showNav=!showNav">
           <span class="glyphicon glyphicon-align-justify"></span>
         </button>
-        <br>
-        <div ng-show="showNav" >
-          <div class="btn-group-vertical" role="group" aria-label="Home">
-            <a class="link" >Home</a>
-            <a class="link" >Products</a>
-            <a class="link" >About Us</a>
-          </div>
-        </div>
-
+      </div>
+    </div>
+    <!-- Large Sreen View -->
+    <div class="navLinkLarge animated slideInDown">
+      <div class="btn-group-vertical" role="group" aria-label="Home">
+        <a class="link" ui-sref="home">Home</a>
+        <a class="link" ui-sref="products">Products</a>
+        <a class="link" ui-sref="documents">Documents</a>
+        <a class="link" ui-sref="aboutUs">About Us</a>
       </div>
     </div>
   </div>
 </nav>
+<!-- Mobile Links -->
+<div id="navLink" ng-show="showNav" class="animated slideInDown">
+  <div class="btn-group-vertical" role="group" aria-label="Home">
+    <a class="link" ui-sref="home">Home</a>
+    <a class="link" ui-sref="products">Products</a>
+    <a class="link" ui-sref="documents">Documents</a>
+  </div>
+</div>

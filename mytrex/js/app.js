@@ -8,17 +8,25 @@ angular.module('mytrex', ['ui.router'])
             url: '/',
             templateUrl: 'views/home/homeTmpl.html',
             controller: 'homeCtrl'
+        }).state('products', {
+            url: '/products',
+            templateUrl: 'views/products/productsTmpl.html',
+            controller: 'productsCtrl'
+        })
+        .state('product', {
+            url: '/products/:product',
+            templateUrl: 'views/products/productTmpl.html',
+            controller: 'productCtrl',
+            resolve: {
+                productData: function (product, $stateParams){
+                    return productService.getProductData($stateParams.product);
+                },
+            }
+        }).state('documents', {
+            url: '/documents',
+            templateUrl: 'views/products/documentsTmpl.html',
+            controller: 'documentsCtrl'
         });
-        // .state('products', {
-        //     url: '/products/:product',
-        //     templateUrl: 'views/products/productsView.html',
-        //     controller: 'teamCtrl',
-        //     resolve: {
-        //         teamData: function (product, $stateParams){
-        //             return productService.getTeamData($stateParams.product);
-        //         },
-        //     }
-        // });
     $urlRouterProvider
         .otherwise('/');
 });

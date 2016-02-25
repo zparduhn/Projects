@@ -5,17 +5,23 @@ html{
 	box-sizing: inherit;
 }
 body{
+	margin: 0;
+}
+body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
 	background-color: #F9F9F9;
 }
+.blue{
+	color: #337AB7;
+}
 .header{
 	width: 100%;
 	background-color: #FFFFFF;
-	padding-top: 20px;
-	padding-bottom: 20px;
 }
-
+.navbar{
+	z-index: 1;
+}
 .logo{
 	display: flex;
 	flex-direction: row;
@@ -33,17 +39,17 @@ body{
 	margin-left: 20px;
 }
 .link a:onHover{
-	color: blue;
+	color: #337AB7;
 }
 .navbar-brand{
-	height: 125px;
+	height: 100px;
 }
-#logo{
-	width: 200px;
+.logo{
+	width: 180px;
 }
 #hamburger{
 	float: right;
-	margin-top: 45px;
+	margin-top: 40px;
 	margin-right: 20px;
 }
 .hamburgerMenu{
@@ -52,4 +58,145 @@ body{
 }
 .hamburgerMenu>a{
 	margin-left: 10px;
+}
+#navLink{
+	margin-top: -20px;
+	background-color: white;
+	z-index: 100;
+	text-align: center;
+}
+.navLinkLarge{
+	display: none;
+}
+.topCard{
+	background-color: white;
+	margin-top: -20px;
+}
+.mainImage{
+	display: block;
+	width: 80%;
+	margin-left: 20px
+}
+.mytexSlogan{
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	margin: 0 auto;
+}
+.secondaryImage{
+	display: none;
+}
+.productsCard{
+	margin: 0 auto;
+}
+.caption{
+	text-align: center;
+}
+.productsCard{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.thumbnail{
+	border: none;
+	width: 100%;
+	display: block;
+}
+.thumbnailImg{
+	width: 50%;
+}
+.custom{
+	background: #337AB7;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.social{
+	text-align: center;
+	background:none;
+}
+.social>div{
+	display: inline-block;
+	margin: 20px;
+}
+footer{
+	background: #337AB7;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+footer>div{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+@media (min-width: 545px){
+	#hamburger{
+		display: none;
+	}
+	#navLink{
+		display: none;
+	}
+	.navLinkLarge{
+		display: flex;
+		justify-content: space-around;
+		float: right;
+	}
+	.mainImage{
+		display: block;
+		width: 410px;
+		margin-left: 20px
+	}
+	.custom>p{
+		display: inline-block;
+	}
+	.productsCard{
+		text-align: center;
+	}
+	.thumbnail{
+		width: 32.5%;
+		display: inline-block;
+		margin: 0;
+	}
+
+@media (min-width: 650px){
+	.mainImage{
+		display: inline-block;
+		width: 410px;
+		margin-left: 20px
+	}
+	.mytexSlogan{
+		display: inline-block;
+		font-size: 25px;
+		text-align: center;
+		margin: auto;
+		padding-top: 100px;
+	}
+}
+@media (min-width: 700px){
+
+	.mainImage{
+		margin-left: 0
+	}
+	.topCard{
+		text-align: center;
+	}
+}
+@media (min-width: 768px){
+
+	.navLinkLarge{
+		float: right;
+		padding-top: 100px;
+	}
+}
+
+
+@media (min-width: 1017px){
+	.secondaryImage{
+		display: inline-block;
+		width: 410px;
+	}
 }
