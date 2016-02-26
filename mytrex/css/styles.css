@@ -10,17 +10,30 @@ body{
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
-	background-color: #F9F9F9;
+	background-color: white;
 }
 .blue{
-	color: #337AB7;
+	color: #286090;
+}
+.productsWrapper{
+	margin-top: -20px;
+	padding-top: 20px;
+	background-color: #286090;
+	z-index: 10;
 }
 .leftAside{
 	width: 200px;
+	margin: 0 auto;
+	background-color: white;
 }
+
 .documents li{
 	list-style-type: none;
 	margin-left: 10px;
+	font-size: 20px;
+}
+.documentsCard{
+	margin: 0 auto;
 }
 .header{
 	width: 100%;
@@ -28,12 +41,14 @@ body{
 }
 .navbar{
 	z-index: 1;
+	background-color: #286090;
 }
 .logo{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
+
 .navLinks{
 	display: flex;
 	flex-direction: row;
@@ -41,12 +56,15 @@ body{
 }
 .link{
 	display: inline-block;
-	color: #B3B3B8;
+	color: #286090;
 	font-size: 22px;
 	margin-left: 20px;
 }
 .link a:onHover{
-	color: #337AB7;
+	color: #286090;
+}
+.link a:active{
+	color: white;
 }
 .navbar-brand{
 	height: 100px;
@@ -67,10 +85,11 @@ body{
 	margin-left: 10px;
 }
 #navLink{
-	margin-top: -20px;
-	background-color: white;
-	z-index: 100;
+	margin-top: -10px;
+	margin-bottom: 25px;
+	z-index: 1;
 	text-align: center;
+
 }
 .navLinkLarge{
 	display: none;
@@ -91,6 +110,24 @@ body{
 	margin: 0 auto;
 	padding-bottom: 20px;
 }
+.iframe-container {
+padding-bottom: 60%;
+padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.modal.in .modal-dialog {
+transform: none; /*translate(0px, 0px);*/
+}
 .synergy{
 	font-size: 40px;
 	font-weight: 700;
@@ -105,6 +142,7 @@ body{
 	display: none;
 }
 .productsCard{
+	background-color: white;
 	margin: 0 auto;
 }
 .caption{
@@ -123,7 +161,7 @@ body{
 	width: 50%;
 }
 .custom{
-	background: #337AB7;
+	background: #286090;
 	color: white;
 	font-size: 30px;
 	text-align: center;
@@ -139,7 +177,7 @@ body{
 	margin: 20px;
 }
 footer{
-	background: #337AB7;
+	background: #286090;
 	color: white;
 	font-size: 20px;
 	text-align: center;
@@ -159,10 +197,29 @@ footer>div{
 	#navLink{
 		display: none;
 	}
+	.linkLarge{
+	display: inline-block;
+	color: white;
+	font-size: 22px;
+	margin-left: 20px;
+	}
+	.linkLarge:hover{
+	display: inline-block;
+	color: #282c37;
+	font-size: 22px;
+	margin-left: 20px;
+	}
+	.linkLarge:active{
+	display: inline-block;
+	color: #282c37;
+	font-size: 22px;
+	margin-left: 20px;
+	}
+
 	.navLinkLarge{
-		display: flex;
-		justify-content: space-around;
+		display: inherit;
 		float: right;
+		color: white;
 	}
 	.mainImage{
 		display: block;
@@ -175,12 +232,28 @@ footer>div{
 	.productsCard{
 		text-align: center;
 	}
+	div.row::before{
+		display: none;
+	}
+	.middle{
+		border-right: solid thin #d9e1e8;
+		border-left: solid thin #d9e1e8;
+	}
 	.thumbnail{
-		width: 32.5%;
+		width: 31%;
 		display: inline-block;
 		margin: 0;
+		padding:0;
+		border-radius: 0;
 	}
-
+	.leftAside{
+		margin-left: 20px;
+		background-color: white;
+		padding: 10px;
+	}
+	.searchText{
+		margin-left: 20px;
+	}
 @media (min-width: 650px){
 	.mainImage{
 		display: inline-block;
