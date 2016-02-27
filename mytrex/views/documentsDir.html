@@ -1,22 +1,22 @@
-<main>
+<main class="productsMain">
   <div class="productsWrapper">
 
     <div class="leftAside">
 
       <input class="searchText" type="text" name="name" placeholder="Search Products..." ng-model="filterText">
       <div >
-        <!-- <a class="view-pdf" href="http://www.bodossaki.gr/userfiles/file/dummy.pdf">View PDF</a> -->
+
         <div class="documentsCard" ng-repeat="document in documents | filter: filterText">
           <h1>{{document.Name}}</h1>
           <ul class="documents">
             <li ng-repeat="(key, value) in document" ng-if="checkValue($index, value)">
-              <a class="view-pdf" href="{{value}}">{{key}}</a>
+              <a ng-model="view-pdf" ng-click="showPDF({{value}})" class="view-pdf" href="{{value}}">{{key}}</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="preview">
+    <div class="preview" id="pdfRenderer">
 
     </div>
   </div>

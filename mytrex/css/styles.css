@@ -15,26 +15,10 @@ body{
 .blue{
 	color: #286090;
 }
-.productsWrapper{
-	margin-top: -20px;
-	padding-top: 20px;
-	background-color: #286090;
-	z-index: 10;
-}
-.leftAside{
-	width: 200px;
-	margin: 0 auto;
-	background-color: white;
+.row::after{
+	display: none;
 }
 
-.documents li{
-	list-style-type: none;
-	margin-left: 10px;
-	font-size: 20px;
-}
-.documentsCard{
-	margin: 0 auto;
-}
 .header{
 	width: 100%;
 	background-color: #FFFFFF;
@@ -42,6 +26,7 @@ body{
 .navbar{
 	z-index: 1;
 	background-color: #286090;
+	height: 20px;
 }
 .logo{
 	display: flex;
@@ -74,8 +59,8 @@ body{
 }
 #hamburger{
 	float: right;
-	margin-top: 40px;
-	margin-right: 20px;
+	margin-top: 5px;
+	margin-right: 5px;
 }
 .hamburgerMenu{
 	text-decoration: none;
@@ -95,7 +80,11 @@ body{
 	display: none;
 }
 .topCard{
-	background-color: white;
+	background-image: url('/images/Banner-1.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 	margin-top: -20px;
 }
 .mainImage{
@@ -189,7 +178,37 @@ footer>div{
 	margin-left: 20px;
 	margin-right: 20px;
 }
-
+.productsMain{
+	margin-top: 20px;
+	padding: 20px;
+}
+.productsWrapper{
+	margin: auto;
+	margin-top: -20px;
+	padding-top: 20px;
+	background-color: #286090;
+	z-index: 10;
+	width: 80%;
+	z-index: 100;
+}
+.leftAside{
+	width: 90%;
+	margin: 0 auto;
+	background-color: white;
+}
+.searchText{
+	width: 90%;
+	margin-top: 10px;
+	margin-left: 5%;
+}
+.documents li{
+	list-style-type: none;
+	margin-left: 10px;
+	font-size: 20px;
+}
+.documentsCard{
+	margin: 0 auto;
+}
 @media (min-width: 545px){
 	#hamburger{
 		display: none;
@@ -202,6 +221,7 @@ footer>div{
 	color: white;
 	font-size: 22px;
 	margin-left: 20px;
+	margin-top: 10px;
 	}
 	.linkLarge:hover{
 	display: inline-block;
@@ -281,7 +301,6 @@ footer>div{
 
 	.navLinkLarge{
 		float: right;
-		padding-top: 100px;
 	}
 }
 
@@ -291,4 +310,4 @@ footer>div{
 		display: inline-block;
 		width: 410px;
 	}
-}
+}*/
