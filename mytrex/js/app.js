@@ -25,7 +25,7 @@ angular.module('mytrex', ['ui.router'])
             }
         }).state('documents', {
             url: '/documents',
-            templateUrl: 'views/products/documentsTmpl.html',
+            templateUrl: 'views/documents/documentsTmpl.html',
             controller: 'documentsCtrl'
         });
     $urlRouterProvider

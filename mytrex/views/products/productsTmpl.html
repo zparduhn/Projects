@@ -1,3 +1,25 @@
-<div>
-This will slide in
-</div>
+<main class="productsMain">
+  <div class="productsTop">
+
+    <div class="mainChip"></div>
+    <div ng-click="showLine()" class="mxdButton iconButton"></div>
+    <div ng-model="mxdLine" class="" ng-class="mxdLine">
+      <span class="MXDvertical"></span>
+      <span class="MXDMainChip">MXD</span>
+      <span class="MXDvertical2"></span>
+    </div>
+    <div ng-click="showLine3g()" class="mxd3gButton iconButton"></div>
+    <div ng-model="mxdLine" class="" ng-class="mxd3gLine">
+      <span class="MXD3gvertical"></span>
+      <span class="MXD3gMainChip">MXD3G</span>
+      <span class="MXD3gvertical2"></span>
+    </div>
+    <div class="productsLogo"><img src="/images/Mytrex-Wall-Paper-transparent.png" width="300px"/></div>
+  </div>
+  <div class="productDetails" ng-class="mxdDetails">
+    <nav-mxddetails></nav-mxddetails>
+  </div>
+  <div class="threeGgDetails" ng-class="mxd3gDetails">
+    <nav-mxd3gdetails></nav-mxd3gdetails>
+  </div>
+</main>
