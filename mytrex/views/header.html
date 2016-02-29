@@ -1,16 +1,20 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar-Mytrex">
     <div class="navbar-header">
-      <!-- <div>
         <a class="navbar-brand" href="#">
-          <img alt="Brand" class="logo" src="images\Mytrex-Wall-Paper-transparent.png">
+          Mytrex Inc | Synergy By Design
         </a>
-      </div> -->
-
       <div class="">
         <button id="hamburger" class="btn btn-default animated fadeIn" ng-click="showNav=!showNav">
           <span class="glyphicon glyphicon-align-justify"></span>
         </button>
+      </div>
+    </div>
+    <!-- Mobile Links -->
+    <div id="navLink" ng-show="showNav" class="animated slideInDown">
+      <div class="btn-group-vertical" role="group" aria-label="Home">
+        <a class="link" ui-sref="home">Home</a>
+        <a class="link" ui-sref="products">Products</a>
+        <a class="link" ui-sref="documents">Documents</a>
       </div>
     </div>
     <!-- Large Sreen View -->
@@ -22,13 +26,4 @@
         <a class="linkLarge" ui-sref="aboutUs">About Us</a>
       </div>
     </div>
-  </div>
 </nav>
-<!-- Mobile Links -->
-<div id="navLink" ng-show="showNav" class="animated slideInDown">
-  <div class="btn-group-vertical" role="group" aria-label="Home">
-    <a class="link" ui-sref="home">Home</a>
-    <a class="link" ui-sref="products">Products</a>
-    <a class="link" ui-sref="documents">Documents</a>
-  </div>
-</div>

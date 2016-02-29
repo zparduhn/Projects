@@ -1,23 +1,8 @@
-<main class="productsMain">
-  <div class="productsWrapper">
-
-    <div class="leftAside">
-
-      <input class="searchText" type="text" name="name" placeholder="Search Products..." ng-model="filterText">
-      <div >
-
-        <div class="documentsCard" ng-repeat="document in documents | filter: filterText">
-          <h1>{{document.Name}}</h1>
-          <ul class="documents">
-            <li ng-repeat="(key, value) in document" ng-if="checkValue($index, value)">
-              <a ng-model="view-pdf" ng-click="showPDF({{value}})" class="view-pdf" href="{{value}}">{{key}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="preview" id="pdfRenderer">
-
-    </div>
-  </div>
-</main>
+<div class="documentsCard" ng-repeat="document in documents | filter: filterText">
+  <h1>{{document.Name}}</h1>
+  <ul class="documents">
+    <li ng-repeat="(key, value) in document" ng-if="checkValue($index, value)">
+      <div class="view-pdf" ng-model="pdfLink" ng-click="iframOpen(value)" value="{{value}}">{{key}}</div>
+    </li>
+  </ul>
+</div>
