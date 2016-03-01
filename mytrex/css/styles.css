@@ -262,7 +262,7 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 .iconButton:hover {
   cursor: pointer;
@@ -297,12 +297,12 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
   /* Firefox */
-  -webkit-animation: fadein 3s;
+  -webkit-animation: fadein 1s;
   /* Safari and Chrome */
-  -o-animation: fadein 3s;
+  -o-animation: fadein 1s;
   /* Opera */
 }
 .MXDvertical2 {
@@ -311,12 +311,12 @@ h3 {
   position: absolute;
   top: 300px;
   left: 155px;
-  animation: fadein 4s;
-  -moz-animation: fadein 4s;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
   /* Firefox */
-  -webkit-animation: fadein 4s;
+  -webkit-animation: fadein 1s;
   /* Safari and Chrome */
-  -o-animation: fadein 4s;
+  -o-animation: fadein 1s;
   /* Opera */
 }
 .mxd3gButton {
@@ -334,7 +334,7 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 .MXD3gvertical {
   height: 50px;
@@ -365,12 +365,12 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
   /* Firefox */
-  -webkit-animation: fadein 3s;
+  -webkit-animation: fadein 1s;
   /* Safari and Chrome */
-  -o-animation: fadein 3s;
+  -o-animation: fadein 1s;
   /* Opera */
 }
 .MXD3gvertical2 {
@@ -379,12 +379,12 @@ h3 {
   position: absolute;
   top: 300px;
   left: 155px;
-  animation: fadein 4s;
-  -moz-animation: fadein 4s;
+  animation: fadein 1s;
+  -moz-animation: fadein 1s;
   /* Firefox */
-  -webkit-animation: fadein 4s;
+  -webkit-animation: fadein 1s;
   /* Safari and Chrome */
-  -o-animation: fadein 4s;
+  -o-animation: fadein 1s;
   /* Opera */
 }
 @keyframes fadein {
@@ -455,7 +455,13 @@ h3 {
 .productsLogo {
   display: none;
 }
-
+.clickMore{
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 400px;
+  margin-left: 80px;
+}
 /*****************************************************************/
 
 @media (min-width: 545px) {
