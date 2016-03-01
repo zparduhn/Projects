@@ -1,20 +1,72 @@
 <main class="productsMain">
 
   <div class="productsTop">
+    <span class="MXDMainChip"></span>
     <div ng-click="showLine()" class="mxdButton iconButton"></div>
-    <div ng-model="mxdLine" class="" ng-class="mxdLine">
+    <div ng-model="mxdLine" class="animated fadeIn" ng-class="mxdLine">
       <span class="MXDvertical"></span>
       <span class="MXDMainChip">MXD</span>
       <span class="MXDvertical2"></span>
+      <span class="vertical3"></span>
+      <span class="vertical4"></span>
+      <span class="vertical5"></span>
+      <div class="productPreview1">
+        POTS, VoIP, GSM & CDMA
+      </div>
+      <span class="vertical6"></span>
+      <div class="productPreview2">
+        Voice messages and prompts
+      </div>
+      <span class="vertical7"></span>
+      <span class="vertical8"></span>
+      <div class="productPreview3">
+        High quality simplex and duplex modes
+      </div>
     </div>
     <div ng-click="showLine3g()" class="mxd3gButton iconButton"></div>
-    <div ng-model="mxdLine" class="" ng-class="mxd3gLine">
+    <div ng-model="mxdLine" class="animated fadeIn" ng-class="mxd3gLine">
       <span class="MXD3gvertical"></span>
       <span class="MXD3gMainChip">MXD3G</span>
       <span class="MXD3gvertical2"></span>
+      <span class="vertical3"></span>
+      <span class="vertical4"></span>
+      <span class="vertical5"></span>
+      <div class="productPreview1">
+        Telguard Patented Technology
+      </div>
+      <span class="vertical6"></span>
+      <div class="productPreview2">
+        3G AT&T Network
+      </div>
+      <span class="vertical7"></span>
+      <span class="vertical8"></span>
+      <div class="productPreview3">
+        Integrated Cellular- No Attachments Necessary
+      </div>
+    </div>
+    <div ng-click="showMyaa()" class="myaaButton iconButton"></div>
+    <div ng-model="myaaLine" class="animated fadeIn" ng-class="myaaLine">
+      <span class="myaaVertical"></span>
+      <span class="myaaMainChip">myActive Alert</span>
+      <span class="myaaVertical2"></span>
+      <span class="vertical3"></span>
+      <span class="vertical4"></span>
+      <span class="vertical5"></span>
+      <div class="productPreview1 animated fadeIn">
+        Separate fall and panic button signals
+      </div>
+      <span class="vertical6"></span>
+      <div class="productPreview2 animated fadeIn">
+        3G AT&T Network
+      </div>
+      <span class="vertical7"></span>
+      <span class="vertical8"></span>
+      <div class="productPreview3 animated fadeIn">
+        Academically and clinically validated technology
+      </div>
     </div>
     <div class="clickMore" ng-class="clickMore">Click a product to learn more</div>
-    <div class="productsLogo"><img src="/images/Mytrex-Wall-Paper-transparent.png" width="300px"/></div>
+    <!-- <div ng-class="mytrexLogoHide" class="productsLogo"><img src="/images/Mytrex-Wall-Paper-transparent.png" width="300px"/></div> -->
   </div>
 
   <div class="productDetails" ng-class="mxdDetails">
@@ -22,5 +74,8 @@
   </div>
   <div class="threeGgDetails" ng-class="mxd3gDetails">
     <nav-mxd3gdetails></nav-mxd3gdetails>
+  </div>
+  <div class="myaaDetails" ng-class="myaaDetails">
+    <nav-myaadetails></nav-myaadetails>
   </div>
 </main>

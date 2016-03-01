@@ -31,4 +31,11 @@ angular.module('mytrex')
     templateUrl: 'views/products/mxd3gDir.html',
     controller: 'productsCtrl',
   };
+})
+.directive('navMyaadetails', function(){
+  return{
+    restrict: 'AE',
+    templateUrl: 'views/products/myaaDir.html',
+    controller: 'productsCtrl',
+  };
 });

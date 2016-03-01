@@ -37,11 +37,23 @@ footer>div {
   margin-right: 20px;
 }
 h3 {
-  color: #286090;
+  color: white;
+  background-color: #141B27;
+  padding: 10px;
 }
 .blue {
   color: #286090;
 }
+.productPreview1{
+  display: none;
+}
+.productPreview2{
+  display: none;
+}
+.productPreview3{
+  display: none;
+}
+
 .row::after {
   display: none;
 }
@@ -227,7 +239,7 @@ h3 {
 .productsTop {
   height: 500px;
   background-image: url('/images/Banner-1.png');
-  background-position: -170px 0;
+  background-position: -140px 0;
   background-repeat: no-repeat;
   background-size: 900px;
   margin-top: -20px;
@@ -237,8 +249,8 @@ h3 {
   color: white;
   position: relative;
   top: 185px;
-  left: 94px;
-  /*border: red solid thin;*/
+  left: 124px;
+  background-color:#56C9EA;
   border-radius: 10px;
   height: 70px;
   width: 73px;
@@ -252,7 +264,7 @@ h3 {
   font-size: 20px;
   position: absolute;
   top: 85px;
-  left: 45px;
+  left: 75px;
   /*border: red solid thin;*/
   border-radius: 10px;
   height: 75px;
@@ -262,7 +274,6 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: all .1s ease-in-out;
 }
 .iconButton:hover {
   cursor: pointer;
@@ -273,14 +284,7 @@ h3 {
   border-left: 3px solid white;
   position: absolute;
   top: 125px;
-  left: 127px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
+  left: 157px;
 }
 .MXDMainChip {
   color: white;
@@ -288,7 +292,8 @@ h3 {
   padding-top: 22px;
   position: absolute;
   top: 201px;
-  left: 113px;
+  left: 143px;
+  background-color:#56C9EA;
   border: white solid medium;
   border-radius: 10px;
   height: 98px;
@@ -297,34 +302,21 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
+
 }
 .MXDvertical2 {
   height: 200px;
   border-left: 3px solid white;
   position: absolute;
   top: 300px;
-  left: 155px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
+  left: 185px;
 }
 .mxd3gButton {
   color: black;
   font-size: 20px;
   position: absolute;
   top: 100px;
-  left: 210px;
+  left: 240px;
   /*border: red solid thin;*/
   border-radius: 10px;
   height: 75px;
@@ -334,21 +326,13 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: all .1s ease-in-out;
 }
 .MXD3gvertical {
   height: 50px;
   border-left: 3px solid white;
   position: absolute;
   top: 152px;
-  left: 196px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
+  left: 226px;
 }
 .MXD3gMainChip {
   color: white;
@@ -356,7 +340,8 @@ h3 {
   padding-top: 22px;
   position: absolute;
   top: 201px;
-  left: 113px;
+  left: 143px;
+  background-color:#56C9EA;
   border: white solid medium;
   border-radius: 10px;
   height: 98px;
@@ -365,28 +350,67 @@ h3 {
   background-position: -15px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
 }
 .MXD3gvertical2 {
   height: 200px;
   border-left: 3px solid white;
   position: absolute;
   top: 300px;
-  left: 155px;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s;
-  /* Firefox */
-  -webkit-animation: fadein 1s;
-  /* Safari and Chrome */
-  -o-animation: fadein 1s;
-  /* Opera */
+  left: 185px;
 }
+
+
+.myaaButton {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 285px;
+  left: 30px;
+  /*border: red solid thin;*/
+  border-radius: 10px;
+  height: 75px;
+  width: 73px;
+  text-align: center;
+  background-image: url('/images/myActive2.png');
+  background-color: white;
+  background-position: -15px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.myaaVertical {
+  width: 80px;
+  border-top: 3px solid white;
+  position: absolute;
+  top: 273px;
+  left: 63px;
+}
+.myaaMainChip {
+  color: white;
+  font-size: 23px;
+  padding-top: 22px;
+  position: absolute;
+  top: 201px;
+  left: 143px;
+  background-color:#56C9EA;
+  border: white solid medium;
+  border-radius: 10px;
+  height: 98px;
+  width: 95px;
+  text-align: center;
+  background-position: -15px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.myaaVertical2 {
+  height: 200px;
+  border-left: 3px solid white;
+  position: absolute;
+  top: 300px;
+  left: 185px;
+}
+
+
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -434,11 +458,31 @@ h3 {
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
+.myaaDetails {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
 .productTopDetails {
   width: 100%;
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
   color: #286090;
+  background: white;
+  margin-top: -20px
+}
+.productOverview{
+  width: 100%;
+}
+.pageTitle{
+  text-align: center;
+}
+.productDetails{
+  width: 100%;
+}
+.productSpecs{
+  width: 100%;
 }
 .productTitle {
   font-size: 25px;
@@ -446,14 +490,18 @@ h3 {
 }
 .productTag {
   font-size: 18px;
-  color: black;
+  color: #286090;
 }
 .productMainDetails {
   margin-left: 10px;
   margin-right: 10px;
+  background: white;
 }
 .productsLogo {
   display: none;
+}
+.lists{
+  text-align: right;
 }
 .clickMore{
   color: white;
@@ -462,6 +510,7 @@ h3 {
   top: 400px;
   margin-left: 80px;
 }
+
 /*****************************************************************/
 
 @media (min-width: 545px) {
@@ -492,7 +541,6 @@ h3 {
   .mainImageDiv {
     height: 300px;
   }
-  .mainImage {}
   .custom>p {
     display: inline-block;
   }
@@ -531,6 +579,7 @@ h3 {
   .MXDvertical2 {
     left: 255px;
   }
+
   .mxd3gButton {
     left: 310px;
   }
@@ -543,6 +592,21 @@ h3 {
   .MXD3gvertical2 {
     left: 255px;
   }
+  .myaaButton {
+    left: 100px;
+  }
+  .myaaVertical {
+    left: 133px;
+  }
+  .myaaMainChip {
+    left: 213px;
+  }
+  .myaaVertical2 {
+    left: 255px;
+  }
+  .productTopDetails{
+    font-size: 20px;
+  }
 }
 @media (min-width: 820px) {
   .linkLarge {
@@ -550,75 +614,179 @@ h3 {
     margin-top: 10px;
   }
   .productsTop {
-    background-position: 100px 0;
+    background-position: 0 0;
   }
   .mxdButton {
-    left: 315px;
+    left: 215px;
   }
   .MXDvertical {
-    left: 397px;
+    left: 297px;
   }
   .MXDMainChip {
-    left: 383px;
+    left: 283px;
   }
   .MXDvertical2 {
-    left: 425px;
+    left: 325px;
+  }
+  .vertical3 {
+    width: 80px;
+    border-top: 3px solid white;
+    position: absolute;
+    top: 224px;
+    left: 375px;
+  }
+  .vertical4{
+    height: 55px;
+    border-right: 3px solid white;
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(39deg);
+    position: absolute;
+    top: 177px;
+    left: 468.5px;
+  }
+  .vertical5 {
+    width: 62px;
+    border-top: 3px solid white;
+    position: absolute;
+    top: 182px;
+    left: 487px;
+  }
+  .productPreview1{
+    display: block;
+    color: #141B27;
+    background-color:white;
+    position: absolute;
+    top: 160px;
+    left: 548px;
+    font-size: 20px;
+    border: medium solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .vertical6 {
+    width: 235px;
+    border-top: 3px solid white;
+    position: absolute;
+    top: 260px;
+    left: 375px;
+  }
+  .productPreview2{
+    display: block;
+    color: #141B27;
+    background-color:white;
+    position: absolute;
+    top: 238px;
+    left: 610px;
+    font-size: 20px;
+    border: medium solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .vertical7 {
+    height: 70px;
+    border-left: 3px solid white;
+    position: absolute;
+    top: 299px;
+    left: 358.5px;
+  }
+  .vertical8 {
+    width: 85px;
+    border-top: 3px solid white;
+    position: absolute;
+    top: 367px;
+    left: 359px;
+  }
+  .productPreview3{
+    display: block;
+    color: #141B27;
+    background-color:white;
+    position: absolute;
+    top: 345px;
+    left: 444px;
+    font-size: 20px;
+    border: medium solid white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .mxd3gButton {
-    left: 480px;
+    left: 380px;
   }
   .MXD3gvertical {
-    left: 466px;
+    left: 366px;
   }
   .MXD3gMainChip {
-    left: 383px;
+    left: 283px;
   }
   .MXD3gvertical2 {
-    left: 425px;
+    left: 325px;
   }
+  .myaaButton {
+    left: 170px;
+  }
+  .myaaVertical {
+    left: 203px;
+  }
+  .myaaMainChip {
+    left: 283px;
+  }
+  .myaaVertical2 {
+    left: 325px;
+  }
+  .productIcon{
+    display: inline-block;
+    margin-right: 40px;
+  }
+  .productTag{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 30px;
+  }
+
+  .leftTile{
+    display: block;
+    width: 49%;
+  }
+  .rightTile{
+    display: block;
+    width: 49%;
+  }
+
 }
 @media (min-width: 900px) {
   .productsLogo {
     display: inline-block;
     float: right;
-    margin-right: 5%;
+    margin-right: 5px;
+    padding-top: 100px;
   }
 }
+@media (min-width: 1000px) {
+  .productPreview1{
+  font-size: 30px;
+  }
+  .productPreview2{
+  font-size: 30px;
+  }
+  .productPreview3{
+  font-size: 30px;
+  }
+
+}
 @media (min-width: 1200px) {
-  .productsTop {
-    background-position: 100px 0;
-  }
-  .mxdButton {
-    left: 315px;
-  }
-  .MXDvertical {
-    left: 397px;
-  }
-  .MXDMainChip {
-    left: 383px;
-  }
-  .MXDvertical2 {
-    left: 425px;
-  }
-  .mxd3gButton {
-    left: 480px;
-  }
-  .MXD3gvertical {
-    left: 466px;
-  }
-  .MXD3gMainChip {
-    left: 383px;
-  }
-  .MXD3gvertical2 {
-    left: 425px;
-  }
+
   .productsLogo>img {
     width: 400px;
   }
   .productsLogo {
     display: inline-block;
     float: right;
-    margin-right: 10%;
+    margin-right: 5px;
   }
   .mainBody {
     position: relative;
