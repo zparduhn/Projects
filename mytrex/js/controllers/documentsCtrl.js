@@ -29,7 +29,7 @@ $scope.showPDF = function(pdf){
   $scope.iframOpen = function(link){
         var iframe = '<object type="application/pdf" data="'+link+'" width="100%" height="500">No Support</object>';
         $.createModal({
-            title:'Mytrex Docutments',
+            title:'Mytrex Documents',
             message: iframe,
             closeButton:true,
             scrollable:false

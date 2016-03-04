@@ -2,7 +2,11 @@ angular.module('mytrex')
 .directive('navDirective', function() {
   return {
     restrict: 'E',
-    templateUrl: 'views/header.html'
+    templateUrl: 'views/header.html',
+    scope: {},
+    link: function (scope, element, attr) {
+      scope.name = 'Zach';
+    }
   };
 })
 .directive('navFooter', function() {

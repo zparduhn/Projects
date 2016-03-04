@@ -121,12 +121,14 @@ h3 {
   text-align: center;
 }
 .mainImageDiv {
-  background-image: url('/images/Mytrex-Wall-Paper-transparent.png');
+
+  background-image: url('/images/MytrexLogo_Grey.png');
+  /*background-image: url('/images/Mytrex-Wall-Paper-transparent.png');*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  width: 80%;
+  width: 65%;
   margin: auto;
   height: 275px;
 }

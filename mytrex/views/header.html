@@ -1,6 +1,6 @@
 <nav class="navbar-Mytrex">
     <div class="navbar-header">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" ng-model="brandImage" href="#">
           Mytrex Inc | Synergy By Design
         </a>
       <div class="">
@@ -23,7 +23,8 @@
         <a class="linkLarge" ui-sref="home">Home</a>
         <a class="linkLarge" ui-sref="products">Products</a>
         <a class="linkLarge" ui-sref="documents">Documents</a>
-        <a class="linkLarge" ui-sref="aboutUs">About Us</a>
+        <a class="link" ui-sref="#/">{{name}}</a>
+        <!-- <a class="linkLarge" ui-sref="aboutUs">About Us</a> -->
       </div>
     </div>
 </nav>

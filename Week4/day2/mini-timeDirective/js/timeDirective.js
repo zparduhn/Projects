@@ -15,9 +15,7 @@ angular.module('timeApp').directive('showTime', function(){
          "color":"red"
        });
        element.on('mousedown', function(){
-        //  scope.time = new Date();
-        //  scope.time2 = new Date(currentTime.toGMTString());
-        //
+
         scope.update();
         scope.$apply();
        });

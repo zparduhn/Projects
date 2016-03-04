@@ -2,8 +2,6 @@ angular.module('mytrex', ['ui.router'])
 
 
 .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
-
-
     $stateProvider
         .state('home', {
             url: '/',
