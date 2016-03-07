@@ -1,4 +1,4 @@
-angular.module('', ['ng.router'], function() {
+angular.module('', ['ui.router'], function() {
 
 })
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {

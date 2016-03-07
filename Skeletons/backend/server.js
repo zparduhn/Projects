@@ -14,9 +14,8 @@ var logger = function(req, res, next) {
 };
 
 var app = express();
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
-
 app.use(session({
     secret: config.sessionSecret,
     saveUninitialized: false,//If you set these to true, it will create a session id regardless of the response. False says I will only create one if I need to.

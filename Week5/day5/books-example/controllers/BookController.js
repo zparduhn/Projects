@@ -6,7 +6,17 @@ module.exports = {
     res.status(200).json(books[books.length - 1]);
   },
 
-  index: function(req, res, next) {
+  index: function(req, res, next) {//query in url looks like mysite.com/books?author=Stephan%20King
+    var results = [];
+    if(req.query.author){
+      for (var i = 0; i < book.length; i++) {
+        if(req.query.author === books[i].author){
+          results.push(books[i]);
+        }
+      }
+    }  else {
+        results = books;
+    }
     res.status(200).json(books);
   },
 
