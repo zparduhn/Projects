@@ -3,18 +3,9 @@
 <head>
   <title>ecommerce</title>
 </head>
-<body ng-controller="controller">
-  <button type="button" ng-click="getProducts()">Get Products</button>
-  <div ng-repeat="product in products">
-    <p>
-      {{product.name}}, ${{product.cost}}
-    </p>
-  </div>
-  <br /><br /><br />
-  <input type="text" ng-model="item" placeholder="product name...">
-  <input type="text" ng-model="price" placeholder="price...">
-  <button type="button" ng-click="addProduct(item, price)">Submit</button>
-    <!-- <ng-view ></ng-view> -->
+<body>
+
+    <div ui-view></div>
 
 
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>

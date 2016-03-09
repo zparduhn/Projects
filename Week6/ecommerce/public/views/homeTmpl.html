@@ -1,0 +1,23 @@
+<button type="button" ng-click="getProducts()">Refresh Products</button>
+<input type="text" name="name" placeholder="Search for a product..." ng-model="searchText">
+<div ng-repeat="product in products | filter: searchText">
+  <div ng-dblclick="deleteProduct(product._id)">
+    <p ng-model="id">
+      {{product.name}} - {{product.description}} - ${{product.price}}
+      <button ng-show="!editDatails" ng-click="editDetails = ! editDetails">Edit</button>
+      <button ng-show="editDetails" ng-click="editDetails = ! editDetails">Cancel</button><br><br>
+      <span ng-show="editDetails">
+        <input type="text" ng-model="newProduct" placeholder="Optional...">
+        <input type="text" ng-model="newDescription">
+        <input type="text" ng-model="newprice">
+        <button type="button" ng-click="editProduct(product._id, newProduct, newDescription, newprice)">Submit Changes</button>
+      </span>
+    </p>
+  </div>
+</div>
+
+<br /><br /><br />
+<input type="text" ng-model="item" placeholder="product name...">
+<input type="text" ng-model="description" placeholder="description...">
+<input type="text" ng-model="price" placeholder="price...">
+<button type="button" ng-click="addProduct(item, description, price)">Add Item</button>
