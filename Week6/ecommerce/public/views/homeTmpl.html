@@ -1,23 +1,80 @@
-<button type="button" ng-click="getProducts()">Refresh Products</button>
+
+
+
+<md-button class="md-raised" ng-click="getProducts()">Refresh Products</md-button>
 <input type="text" name="name" placeholder="Search for a product..." ng-model="searchText">
 <div ng-repeat="product in products | filter: searchText">
   <div ng-dblclick="deleteProduct(product._id)">
     <p ng-model="id">
       {{product.name}} - {{product.description}} - ${{product.price}}
-      <button ng-show="!editDatails" ng-click="editDetails = ! editDetails">Edit</button>
-      <button ng-show="editDetails" ng-click="editDetails = ! editDetails">Cancel</button><br><br>
+      <md-button class="md-raised" ng-show="!editDatails" ng-click="editDetails = ! editDetails">Edit</md-button>
+      <md-button class="md-raised" ng-show="editDetails" ng-click="editDetails = ! editDetails">Cancel</md-button><br><br>
       <span ng-show="editDetails">
         <input type="text" ng-model="newProduct" placeholder="Optional...">
         <input type="text" ng-model="newDescription">
         <input type="text" ng-model="newprice">
-        <button type="button" ng-click="editProduct(product._id, newProduct, newDescription, newprice)">Submit Changes</button>
+        <md-button class="md-raised" ng-click="editProduct(product._id, newProduct, newDescription, newprice)">Submit Changes</md-button>
       </span>
     </p>
   </div>
 </div>
 
+<div>
+  <md-fab-toolbar md-open="demo.isOpen" count="demo.count"
+                  md-direction="right">
+    <md-fab-trigger class="align-with-text">
+      <md-button aria-label="menu" class="md-fab md-primary">
+        <span>New</span>
+      </md-button>
+    </md-fab-trigger>
+    <md-toolbar>
+      <md-fab-actions class="md-toolbar-tools">
+        <md-button class="md-raised" ng-click="addProduct(item, description, price)">Add Item</md-button>
+        <input type="text" ng-model="price" placeholder="price...">
+        <input type="text" ng-model="description" placeholder="description...">
+        <input type="text" ng-model="item" placeholder="product name...">
+      </md-fab-actions>
+    </md-toolbar>
+  </md-fab-toolbar>
+</div>
+
+
 <br /><br /><br />
 <input type="text" ng-model="item" placeholder="product name...">
 <input type="text" ng-model="description" placeholder="description...">
 <input type="text" ng-model="price" placeholder="price...">
-<button type="button" ng-click="addProduct(item, description, price)">Add Item</button>
+<md-button class="md-raised" ng-click="addProduct(item, description, price)">Add Item</md-button>
+
+
+
+<div ng-cloak>
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card  ng-repeat="product in products | filter: searchText">
+        <img ng-src="" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{product.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="start center">
+          <md-card-icon-actions>
+            <md-button class="" aria-label="Favorite">
+              <md-icon md-svg-icon=""></md-icon>
+            </md-button>
+            <md-button class="" aria-label="Share">
+              <md-icon md-svg-icon=""></md-icon>
+            </md-button>
+          </md-card-icon-actions>
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+        <md-card-content>
+          <p>
+            {{product.description}}
+          </p>
+        </md-card-content>
+      </md-card>
+    </div>
+  </md-content>
+</div>

@@ -1,4 +1,4 @@
-angular.module('ecommerce', ['ui.router'], function() {
+angular.module('ecommerce', ['ui.router', 'ngMaterial'], function() {
 
 })
   .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {

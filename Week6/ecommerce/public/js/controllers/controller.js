@@ -37,5 +37,19 @@ angular.module('ecommerce').controller('controller', function($scope, service){
   $scope.showEdit = function(){
       $scope.show.button = true;
   };
+
+
+
+        $scope.isOpen = true;
+        $scope.demo = {
+          isOpen: false,
+          count: 0,
+          selectedDirection: 'left'
+        };
+
+
+$scope.imagePath = 'img/washedout.png';
+
+
   $scope.getProducts();
 });

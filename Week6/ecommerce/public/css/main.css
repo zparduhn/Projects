@@ -7,3 +7,8 @@ html{
 body{
 	margin: 0;
 }
+.md-button.md-raised:not([disabled]) {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.fabToolbardemoBasicUsage md-fab-toolbar.md-right md-fab-trigger.align-with-text {
+  left: 0px; }

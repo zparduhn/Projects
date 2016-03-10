@@ -3,6 +3,9 @@ var bodyParser = require('body-parser');
 
 var cors = require("cors");
 var MainCtrl = require("./controllers/MainCtrl.js");
+//var OrderCtrl = require("./controllers/OrderCtrl.js");
+var CartCtrl = require("./controllers/CartCtrl.js");
+var UserCtrl = require("./controllers/UserCtrl.js");
 var mongoose = require('mongoose');
 var Product = require("./product.js");
 
@@ -24,14 +27,23 @@ var port = 3000;
 
 
 
-// var db = mongojs("ecommerce");
-// var collection = db.collection("products");
-// var ObjectId = mongojs.ObjectId;
+//Product Endpoints
 app.post('/products', MainCtrl.create);
 app.get('/products', MainCtrl.index);
 app.get('/products/:id', MainCtrl.show);
 app.put('/products/:id', MainCtrl.update);
 app.delete('/products/:id', MainCtrl.destroy);
+
+//order Endpoints
+//app.post('/api/order/:user_id', OrderCtrl.create);
+//app.get('/api/order/', OrderCtrl.index);
+//Cart Endpoints
+app.post('/api/cart/:user_id', CartCtrl.create);
+app.put('/api/cart/:user_id', CartCtrl.update);
+//User Endpoints
+app.get('/api/user/:user_id', UserCtrl.show);
+app.post('/api/user', UserCtrl.create);
+
 
 
 
