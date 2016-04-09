@@ -25,6 +25,11 @@ angular.module('mytrex', ['ui.router'])
             url: '/documents',
             templateUrl: 'views/documents/documentsTmpl.html',
             controller: 'documentsCtrl'
+        })
+        .state('signIn', {
+            url: '/signIn',
+            templateUrl: 'views/distributor/signInTmpl.html',
+            controller: 'signInCtrl'
         });
     $urlRouterProvider
         .otherwise('/');

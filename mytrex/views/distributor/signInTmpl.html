@@ -1,0 +1,26 @@
+<!-- <br><br><br>
+<div id="formWrapper" class="center">
+    <form id="signInForm" >
+        User Name: <input type="email" name="userName" id="userName"  size="20" required>
+        <br>
+        Password: <input type="password" name="password" id="password" size="20" required onkeydown="if (event.keyCode == 13) event.preventDefault()" onKeyUp="if (event.keyCode == 13) submitUsernamePassword(document.getElementById('userName').value, document.getElementById('password').value);">
+        <br>
+        <input type="button" id="submit" value="Submit" onClick="javascript:submitUsernamePassword(document.getElementById('userName').value, document.getElementById('password').value);">
+        <div id="message">&nbsp;</div>
+        <a href="#"><div id="forgot">Forgot password</div></a>
+        <div id="test">&nbsp;</div>
+    </form>
+</div> -->
+<form class="signInForm">
+  <div class="group">
+    <input type="email" ng-model="userName" ><span class="highlight"></span><span class="bar"></span>
+    <label>User Name</label>
+  </div>
+  <div class="group">
+    <input type="password" ng-model="password"><span class="highlight"></span><span class="bar"></span>
+    <label>Password</label>
+  </div>
+  <button type="button" class="button buttonBlue" ng-click="signIn(userName, password)">Sign In
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+</form>
